@@ -6,19 +6,22 @@
 A lightweight server clone of Azure Blob, Queue, and Table Storage that simulates most of the commands supported by it with minimal dependencies.
 
 # Why this fork?
-We are maintaining this fork because the upstream has not deployed new packages since 2.6.5 despite having released code for 2.6.7
-For now, we are just deploying updated Docker images. Raise an Issue if you would like to see us host the NPM package as well
+~~We are maintaining this fork because the upstream has not deployed new packages since 2.6.5 despite having released code for 2.6.7
+For now, we are just deploying updated Docker images. Raise an Issue if you would like to see us host the NPM package as well~~
+
+Update: Azurite has resumed pushing out packages (see here: https://github.com/Azure/Azurite/issues/94#issuecomment-447785116)
+As such we recommend using the official fork and packages and will no longer produce builds. We do not plan on removing `ironmoosedevelopment/azurite 2.6.7` from Docker Hub so as to prevent breaking any code that depends on it.
 
 # Installation and Usage
 
 ## Docker image
 
 ### Pulling from Docker Hub
-Every release of Azurite starting with version 2.6.7 is available at [Docker Hub](https://hub.docker.com/r/ironmoosedevelopment/azurite/) and ready to be pulled with:
+Azurite 2.6.7 is available at [Docker Hub](https://hub.docker.com/r/ironmoosedevelopment/azurite/) and ready to be pulled with:
 ```bash
 $ docker pull ironmoosedevelopment/azurite
 ```
-Please note that the `latest` tag will always refer to the latest release.
+Please note that the `latest` tag will always refer to 2.6.7
 
 ### Build the Docker image 
 To build the Docker image yourself, execute the following:
